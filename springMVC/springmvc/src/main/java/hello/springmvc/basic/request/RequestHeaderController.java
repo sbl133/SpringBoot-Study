@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.Locale;
 
 @Slf4j
@@ -24,7 +25,6 @@ public class RequestHeaderController {
                           @RequestHeader MultiValueMap<String, String> headerMap,
                           @RequestHeader("host") String host,
                           @CookieValue(value="myCookie", required = false) String cookie) {
-
         log.info("request={}", request);
         log.info("response={}", response);
         log.info("httpMethod={}", httpMethod);

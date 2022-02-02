@@ -48,7 +48,7 @@ public class RequestBodyStringController {
         String messageBody = httpEntity.getBody();
         log.info("messageBody={}", messageBody);
 
-        return new ResponseEntity<String>("ok", HttpStatus.CREATED);
+        return new ResponseEntity<>("ok", HttpStatus.CREATED);
     }
 
     @ResponseBody
