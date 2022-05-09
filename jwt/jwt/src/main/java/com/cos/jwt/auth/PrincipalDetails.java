@@ -50,6 +50,7 @@ public class PrincipalDetails implements UserDetails {
         return true;
     }
 
+    // 휴면계정 관리?
     @Override
     public boolean isEnabled() {
         return true;

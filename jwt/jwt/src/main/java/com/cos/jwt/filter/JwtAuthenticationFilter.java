@@ -43,6 +43,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             User user = om.readValue(request.getInputStream(), User.class);
             System.out.println("user = " + user);
 
+
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword());
 
             // 2. 정상인지 로그인 시도를 해본다. authenticationManager로 로그인 시도를 하면
@@ -65,11 +66,10 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // 4. JWT토큰을 만들어서 응답
         return null;
     }
 
-
+    // 4. JWT토큰을 만들어서 응답
     // attemptAuthentication실행 후 인증이 정상적으로 되었으묜 successfulAuthentication 함수가 실행됨
     // JWT 토큰을 여기서 만들어서 request요청한 사용자에게 JWT 토큰을 response해주면 됨.
     @Override
