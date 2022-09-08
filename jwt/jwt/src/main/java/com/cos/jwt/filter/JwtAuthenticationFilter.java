@@ -54,8 +54,8 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             Authentication authentication = authenticationManager.authenticate(authenticationToken);
 
             //  로그인이 정상적으로 되었는지 확인
-            PrincipalDetails principalDetails = (PrincipalDetails) authentication.getPrincipal();
-            System.out.println("로그인 완료됨 : " + principalDetails.getUser().getUsername());
+//            PrincipalDetails principalDetails = (PrincipalDetails) authentication.getPrincipal();
+//            System.out.println("로그인 완료됨 : " + principalDetails.getUser().getUsername());
 
             // 3. PrincipalDetails을 세션에 담고(권한관리를 위해)
 
