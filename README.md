@@ -1,4 +1,4 @@
-# SpringBoost-Study
+# SpringBoot-Study
 
 스프링부트를 공부하면서 작성한 코드입니다.
 
