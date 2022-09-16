@@ -76,6 +76,4 @@ public class UnCheckedAppTest {
             super(cause);
         }
     }
-
-
 }
