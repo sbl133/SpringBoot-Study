@@ -8,6 +8,6 @@
  - introduction : [인프런 - 스프링 입문](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard)
  - jwt : [유튜브(메타코딩) - springboot 시큐리티 특강(JWT)](https://www.youtube.com/playlist?list=PL93mKxaRDidERCyMaobSLkvSPzYtIk0Ah)
  - security : [유튜브(메타코딩) - springboot 시큐리티 특강(세션)](https://www.youtube.com/playlist?list=PL93mKxaRDidERCyMaobSLkvSPzYtIk0Ah)
- -  - springDB/jdbc : [인프런 - 스프링 DB 1편 데이터 접근 핵심 원리](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-db-1/dashboard)
+ - springDB/jdbc : [인프런 - 스프링 DB 1편 데이터 접근 핵심 원리](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-db-1/dashboard)
  - springMVC/springmvc : [인프런 - 스프링 MVC 1편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)
  - springMVC/나머지 : [인프런 - 스프링 MVC 2편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-2/dashboard)
