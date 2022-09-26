@@ -1,6 +1,6 @@
 package hello.proxy.cglib.code;
 
-
+import hello.proxy.common.service.ConcreteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
@@ -10,14 +10,14 @@ import java.lang.reflect.Method;
 @Slf4j
 public class TimeMethodInterceptor implements MethodInterceptor {
 
-    private final Object target;
+    private final ConcreteService target;
 
-    public TimeMethodInterceptor(Object target) {
+    public TimeMethodInterceptor(ConcreteService target) {
         this.target = target;
     }
 
     @Override
-    public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         log.info("TimeProxy 실행");
         long startTime = System.currentTimeMillis();
 
