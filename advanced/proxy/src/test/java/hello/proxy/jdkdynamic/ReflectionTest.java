@@ -4,10 +4,25 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Method;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 @Slf4j
 public class ReflectionTest {
 
+    private void template(Supplier<String> supplier) {
+        log.info("start");
+        String result = supplier.get();
+        log.info("result={}", result);
+    }
+
+    @Test
+    void reflection00() {
+        Hello hello = new Hello();
+        template(hello::callA);
+        template(hello::callB);
+    }
 
     @Test
     void reflection0() {
