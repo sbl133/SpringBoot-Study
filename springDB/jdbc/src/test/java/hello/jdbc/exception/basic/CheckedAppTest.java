@@ -12,9 +12,10 @@ public class CheckedAppTest {
     void checked() {
         Controller controller = new Controller();
         Assertions.assertThrows(Exception.class,
-                () -> controller.request());
+            () -> controller.request());
     }
-    static class Controller{
+
+    static class Controller {
         Service service = new Service();
 
         public void request() throws SQLException, ConnectException {
@@ -22,7 +23,7 @@ public class CheckedAppTest {
         }
     }
 
-    static class Service{
+    static class Service {
         Repository repository = new Repository();
         NetworkClient networkClient = new NetworkClient();
 
@@ -31,12 +32,14 @@ public class CheckedAppTest {
             networkClient.call();
         }
     }
-    static class NetworkClient{
+
+    static class NetworkClient {
         public void call() throws ConnectException {
             throw new ConnectException("연결 실패");
         }
     }
-    static class Repository{
+
+    static class Repository {
         public void call() throws SQLException {
             throw new SQLException("ex");
         }
