@@ -1,6 +1,8 @@
-package hello.order;
+package hello.order.v0;
 
+import hello.order.OrderService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
