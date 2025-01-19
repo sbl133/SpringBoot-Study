@@ -43,4 +43,22 @@ class OrderServiceTest {
         assertThat(orderOptional.isEmpty()).isTrue();
     }
 
+    @Test
+    void bizException() {
+        // given
+        Order order = new Order();
+        order.setUsername("잔고부족");
+        // when
+
+        try {
+            orderService.order(order);
+        } catch (NotEnoughMoneyException e) {
+            log.info("고객에게 잔고 부족을 알리고 별도의 계좌로 입금하도록 안내");
+
+        }
+        // then
+        Order findOrder = orderRepository.findById(order.getId()).get();
+        assertThat(findOrder.getPayStatus()).isEqualTo("대기");
+    }
+
 }
